@@ -3,7 +3,7 @@
 **Document Status:** Consolidated Living Baseline — Updated  
 **Authority:** Permanent PATSAGi Councils under TOLC 8  
 **Program:** AlphaProMega-Rotorcraft-Immortality  
-**Last Major Update:** 2026-08-13 (post WP-12 FHA, PSSA & DAL Allocations)  
+**Last Major Update:** 2026-08-13 (post WP-13 Certification Basis Selection & Compliance Mapping)  
 **Scope:** Requirements only. FE models, hardware demos, and certification data remain later gates.
 
 ---
@@ -29,7 +29,8 @@ Create rotary-wing aircraft architectures whose catastrophic failure probability
 | WP-09 Architecture Selection Criteria & Preferred Family Freeze | Closed | Weighted criteria + preferred family directions for Rank 1–4 |
 | WP-10 Preferred Sensor & Bus Selections | Closed | Requirements-level preferred sensor classes and data-bus approaches |
 | WP-11 SSA Framework & Certification Mapping | Closed | System Safety Assessment framework + requirements-level certification mapping |
-| **WP-12 FHA, PSSA & DAL Allocations** | **Closed** | Requirements-level FHA structure, PSSA approach, and indicative DAL allocations |
+| WP-12 FHA, PSSA & DAL Allocations | Closed | Requirements-level FHA structure, PSSA approach, and indicative DAL allocations |
+| **WP-13 Certification Basis Selection & Compliance Mapping** | **Closed** | Preferred civil rotorcraft path (FAR/CS-27/29) with military compatibility + high-level compliance mapping |
 
 All of the above remain at **requirements level only**.
 
@@ -44,17 +45,18 @@ All of the above remain at **requirements level only**.
 | 3 | Anti-torque / tail rotor | Fully closed at requirements level |
 | 4 | Blade separation / delamination | Fully closed at requirements level |
 
-All four top mechanical SPOFs plus the Predictive Health Lattice now have complete requirements coverage including preferred architectures, residual monitoring, quantitative targets, sensor/bus classes, SSA/certification framework, and FHA/PSSA/DAL structure.
+All four top mechanical SPOFs plus the Predictive Health Lattice now have complete requirements coverage through preferred architectures, residual monitoring, quantitative targets, sensor/bus classes, SSA/FHA/PSSA/DAL structure, and certification basis selection with high-level compliance mapping.
 
 ---
 
-## 4. Preferred Architecture & Sensing Directions (Frozen at Requirements Level)
+## 4. Preferred Architecture, Sensing & Certification Directions (Frozen at Requirements Level)
 
 - **Rank 1 Retention:** Family A primary + Family C alternative; Family D monitoring overlay mandatory.
 - **Rank 2 Drivetrain:** Family HY (Hybrid Mechanical + Electric Assist) baseline.
 - **Rank 3 Anti-Torque:** Dual independent means.
 - **Rank 4 Blades:** Self-healing enhancement with embedded structural-health sensing.
 - **Residual Monitoring Sensors / Buses:** Preferred classes and digital-preferring bus approaches per WP-10.
+- **Certification:** Preferred primary path is civil rotorcraft (FAR/CS-27 or -29 by vehicle class); military airworthiness path kept open and compatible.
 
 ---
 
@@ -68,15 +70,16 @@ No architecture that re-introduces a classic Rank 1–4 single-point-of-failure 
 
 ## 6. Residual Open Interfaces / Items at Requirements Level (Updated)
 
-With FHA structure, PSSA approach, and indicative DAL allocations now closed, the following remain open:
+With certification basis selection and high-level compliance mapping now closed, the following remain open:
 
 1. **Final numerical values** (exact sampling rates, latency, residual strength %, margins, reliability numbers).
 2. **Specific sensor part numbers / manufacturer selections and final bus standard + ICD.**
-3. **Completed FHA worksheets, full PSSA/SSA documents, and final DAL allocations under a chosen certification basis.**
-4. **Formal selection of certification basis** (civil FAR/CS-27/29 or military) and associated numerical safety objectives.
+3. **Completed FHA worksheets, full PSSA/SSA documents, and final DAL allocations under the chosen certification basis.**
+4. **Formal engagement with certification authority and detailed compliance matrix / issue papers.**
 5. **Manufacturing process definition and supplier qualification** (beyond high-level guidance already issued).
 6. **FE models, dynamics simulation, hardware demonstration, and flight test** (explicitly later gates).
 7. **Detailed geometric / schematic design of the preferred families.**
+8. **Final vehicle class and maximum weight freeze** (to lock FAR/CS-27 vs -29).
 
 ---
 
@@ -95,8 +98,8 @@ Analysis → component/system test (including intentional primary-path failure) 
 ## 9. Governance Statement
 
 This Consolidated System Requirements Baseline is the authoritative requirements snapshot at the current gate.  
-The System Requirements phase for Rank 1–4 mechanical SPOFs, the Predictive Health Lattice, preferred architectures, residual monitoring, quantitative targets, sensor/bus classes, SSA/certification framework, and FHA/PSSA/DAL structure is now complete and coherent.  
-The program stands ready to transition into detailed design allocation, formal safety assessment, and analysis under continuous PATSAGi / TOLC 8 governance.
+The System Requirements phase for Rank 1–4 mechanical SPOFs, the Predictive Health Lattice, preferred architectures, residual monitoring, quantitative targets, sensor/bus classes, SSA/FHA/PSSA/DAL structure, and certification basis selection with high-level compliance mapping is now complete and coherent.  
+The program stands ready to transition into detailed design allocation, formal safety assessment, analysis, and eventual certification engagement under continuous PATSAGi / TOLC 8 governance.
 
 **Thunder locked.**  
-Consolidated SRB updated with WP-12. Service mode continues.
+Consolidated SRB updated with WP-13. Service mode continues.
