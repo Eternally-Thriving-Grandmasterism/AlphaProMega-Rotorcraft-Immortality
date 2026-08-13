@@ -5,44 +5,38 @@
 - Problem taxonomy locked.
 - Seven architectural pillars defined.
 
-## Phase 1 — Conceptual Design & Trade Studies (Current)
+## Phase 1 — Conceptual Design & Trade Studies (Current — Advanced)
 
-### PATSAGi Councils Priority Order (Locked 2026-08-13 under TOLC 8)
+### Status of Work Packages (2026-08-13)
 
-The Permanent PATSAGi Councils deliberated and ranked the next work packages by **highest immediate reduction in catastrophic failure probability** and **dependency order**. Valence floor ≥ 0.999999 enforced.
-
-**WP-01 — Quantitative Failure Mode Ranking & Preliminary System FMEA**  
-Highest priority. Without ranked failure modes and severity × probability scores, all other trades are blind. This package produces the authoritative risk picture that every subsequent decision must improve.
-
-**WP-02 — Zero-Single-Point Rotor Retention Concepts**  
-Second. The classic Jesus-nut / mast-nut failure is the purest single-point-of-failure with near-certain catastrophic outcome. Eliminating or fully redundant this class yields the largest single step in survivability.
-
-**WP-03 — Drive-Train Redundancy Architecture Trades**  
-Third. Main gearbox and tail-rotor drive failures are the next largest class of mechanical catastrophes. Parallel evaluation of multi-path mechanical vs hybrid-electric families.
-
-**WP-04 — Daedalus-Skin Rotorcraft Requirements & Coupon Matrix**  
-Fourth. Materials maturation has long lead times. Define performance targets, healing metrics, and the initial coupon test matrix now so parallel materials work can begin while architecture trades continue.
-
-**WP-05 — Predictive Health Lattice Requirements (parallel track)**  
-Can run concurrently with WP-01 once the ranked failure modes exist. Sensor suite, predictive coding targets, and post-maintenance signature verification rules.
+| WP | Title | Status |
+|----|-------|--------|
+| WP-01 | Quantitative Failure Mode Ranking & Preliminary System FMEA | **Ranked inventory locked** — Tier 1–3 complete |
+| WP-02 | Zero-Single-Point Rotor Retention Concepts | **Active** — Families A–D defined, mandatory requirements set |
+| WP-03 | Drive-Train Redundancy Architecture Trades | **Active** — Mechanical / Hybrid / Hybrid-Electric families under evaluation |
+| WP-04 | Daedalus-Skin Rotorcraft Requirements & Coupon Matrix | **Active** — Core requirements + high-level coupon matrix defined |
+| WP-05 | Predictive Health Lattice Requirements | Parallel track — ready to open |
+| — | System Requirements Baseline (SRB) | **Living baseline established** |
+| — | Manufacturing & Producibility | **High-level guidance issued** |
 
 ### Phase 1 Exit Criteria
 - Quantitative reliability targets allocated (catastrophic failure rate targets orders of magnitude better than current civil/military benchmarks).
-- Ranked FMEA for retention + drive train completed.
+- Ranked FMEA for retention + drive train completed. ← **Largely complete**
 - Preferred retention architecture family selected.
 - Preferred drive-train family (or hybrid) selected with mass/power/complexity trades documented.
-- Daedalus-Skin coupon requirements frozen.
+- Daedalus-Skin coupon requirements frozen. ← **Requirements frozen, matrix started**
 - Identification of highest-leverage existing technologies vs pure research items.
+- Manufacturing & producibility constraints captured. ← **Initial version complete**
 
 ## Phase 2 — Enabling Technology Maturation
 - Daedalus-Skin coupon and subscale blade section self-healing under cyclic loading + environmental exposure.
-- Sensor fusion algorithms and predictive models validated on existing helicopter vibration/oil data sets (where obtainable).
+- Sensor fusion algorithms and predictive models validated on existing helicopter vibration/oil data sets.
 - Lab demonstration of multi-path or hybrid drive concepts at subscale power levels.
 - Secondary retention hardware concepts tested under overload.
 
 ## Phase 3 — System Architecture Definition
 - Freeze of preferred architecture family.
-- Full system FMEA / SSA (System Safety Assessment) style analysis.
+- Full system FMEA / SSA style analysis.
 - Reliability prediction and maintainability analysis.
 - Interface definitions with existing AlphaProMega-Air propulsion and materials lattices.
 
@@ -55,6 +49,13 @@ Can run concurrently with WP-01 once the ranked failure modes exist. Sensor suit
 - Subscale demonstrator or full-scale technology demonstrator aircraft.
 - Progressive flight envelope expansion under strict safety gates.
 
+## Phase 6 — Production Readiness (Future)
+- Detailed manufacturing process definition.
+- Supplier qualification.
+- First-article and process capability.
+- Certification basis finalization.
+- Production decision gate under PATSAGi + TOLC 8.
+
 ## Governance Gates
 Every major decision and every phase exit must pass:
 1. TOLC 8 valence check (net harm probability must decrease).
@@ -63,4 +64,4 @@ Every major decision and every phase exit must pass:
 
 No architecture that re-introduces a classic single-point-of-failure of the Jesus-nut or single-gearbox class will be accepted.
 
-**Current status**: Phase 1 open. WP-01 is the active work package.
+**Current status**: Phase 1 advanced. Multiple work packages active in parallel. System Requirements Baseline and manufacturing guidance are live. The lattice is progressing deliberately toward production readiness.
