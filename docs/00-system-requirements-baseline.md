@@ -4,6 +4,7 @@
 **Authority:** Permanent PATSAGi Councils under TOLC 8  
 **Program:** AlphaProMega-Rotorcraft-Immortality  
 **Freeze Date:** 2026-08-13  
+**Last Status Update:** 2026-08-13 (Residual Strength Analysis Package Rank 1–4 recorded as closed at parametric definition level)  
 **Scope:** Requirements only. All residual open items deferred to later gates. FE models, hardware demos, and certification data remain later gates.
 
 ---
@@ -14,7 +15,7 @@ Create rotary-wing aircraft architectures whose catastrophic failure probability
 
 ---
 
-## 2. Traceability of Closed Work Packages (Frozen)
+## 2. Traceability of Closed Work Packages (Frozen at Requirements Level)
 
 | Work Package | Status at Requirements Level | Key Contribution to SRB |
 |--------------|------------------------------|-------------------------|
@@ -36,11 +37,24 @@ Create rotary-wing aircraft architectures whose catastrophic failure probability
 | WP-16 Geometric Design Criteria & Residual Capability Preservation Rules | Closed | Geometric criteria, constraints, and residual capability preservation rules |
 | WP-17 Residual Performance Criteria & Health Lattice Detection/Response Rules | Closed | Residual performance after primary path failure + Health Lattice detection and response rules |
 
-**All of the above are formally frozen at requirements level.**
+**All of the above remain formally frozen at requirements level.**
 
 ---
 
-## 3. Top-SPOF FMEA Coverage Confirmation (Frozen)
+## 3. Downstream Definition Packages (Status Only — Not Requirements)
+
+| Package | Status | Scope |
+|---------|--------|-------|
+| Detailed Design Allocation (WP-18–22) | FORMALLY FROZEN | Allocation / primary interfaces only |
+| Analysis Scope & FE Planning (WP-23) | FORMALLY FROZEN | Planning only |
+| FE Model Constructions (WP-24–28) | FORMALLY FROZEN | Geometry idealization, mesh strategy, BCs, load cases only |
+| **Residual Strength Analysis Package (WP-29–39)** | **CLOSED at parametric definition level** | Residual magnitudes, cases, demands, allowables, methods, solutions, results, package closure — all parametric; no numerical engineering-unit values; no final pass/fail |
+
+The Residual Strength Analysis Package (Rank 1–4) is closed at the parametric definition level. It does not modify the frozen System Requirements Baseline. Numerical residual strength execution remains a later gate.
+
+---
+
+## 4. Top-SPOF FMEA Coverage Confirmation (Frozen)
 
 | Rank | Failure Mode | Coverage Status |
 |------|--------------|-----------------|
@@ -53,7 +67,7 @@ All four top mechanical SPOFs plus the Predictive Health Lattice are fully cover
 
 ---
 
-## 4. Preferred Directions (Frozen at Requirements Level)
+## 5. Preferred Directions (Frozen at Requirements Level)
 
 - **Rank 1 Retention:** Family A primary + Family C alternative; Family D monitoring overlay mandatory. Residual path retains rotor under limit loads and permits controlled landing.
 - **Rank 2 Drivetrain:** Family HY (Hybrid Mechanical + Electric Assist) baseline. Residual torque/power for controlled landing after primary path loss.
@@ -67,7 +81,7 @@ All four top mechanical SPOFs plus the Predictive Health Lattice are fully cover
 
 ---
 
-## 5. Top-Level Safety Requirements (Non-Negotiable, Frozen)
+## 6. Top-Level Safety Requirements (Non-Negotiable, Frozen)
 
 SR-SAFE-001 to SR-SAFE-006 remain as previously traced.  
 Independence of paths is a safety requirement. The Health Lattice is a detection / protective-support layer, not the sole residual means.  
@@ -75,44 +89,48 @@ No architecture that re-introduces a classic Rank 1–4 single-point-of-failure 
 
 ---
 
-## 6. Residual Open Interfaces — Formally Deferred to Later Gates
+## 7. Residual Open Interfaces — Formally Deferred to Later Gates
 
-The following items are explicitly deferred. They are not open requirements-level work; they are later-gate activities:
+The following items remain explicitly deferred. They are not open requirements-level work; they are later-gate activities:
 
-1. **Final numerical values** (exact sampling rates, latency, residual strength %, margins, residual torque/yaw authority numbers, reliability numbers) — Detailed Design / Analysis gates.
+1. **Final numerical values** (exact sampling rates, latency, residual strength %, margins, residual torque/yaw authority numbers, reliability numbers, residual strength allowables in engineering units) — Detailed Design / Analysis gates.
 2. **Specific sensor part numbers / manufacturer selections and final bus standard + ICD** — Detailed Design / Supplier Selection gates.
 3. **Completed FHA worksheets, full PSSA/SSA documents, and final DAL allocations under the chosen certification basis** — Formal Safety Assessment gate.
 4. **Formal engagement with certification authority and detailed compliance matrix / issue papers** — Certification Engagement gate.
 5. **Detailed work instructions, supplier process qualifications, first-article data, and SPC limits** — Manufacturing Process Development / Production gates.
-6. **FE models, dynamics simulation, hardware demonstration, and flight test** — Analysis / Test / Flight gates.
+6. **FE models (solved), dynamics simulation, hardware demonstration, and flight test** — Analysis / Test / Flight gates.
 7. **Detailed geometric / schematic design (CAD) of the preferred families** — Detailed Design gate.
 8. **Actual vehicle class declaration and numerical maximum weight freeze** — Vehicle Definition / Weight Freeze gate.
+9. **Material system selection and material allowable data** — Material / Allowables gate.
+10. **Final pass/fail residual strength substantiation** — Residual Strength Analysis Execution gate.
 
 ---
 
-## 7. Nice-to-Have Features (Still Prioritized, Not Frozen Requirements)
+## 8. Nice-to-Have Features (Still Prioritized, Not Frozen Requirements)
 
 Continued restricted flight after primary path failure, modular LRUs, multi-cycle healing, hybrid-electric autorotation assist, digital twin, reduced vibration, advanced corrosion packages, maintenance task simplification, near-zero scheduled overhaul via true condition-based maintenance.
 
 ---
 
-## 8. Verification Philosophy (Unchanged)
+## 9. Verification Philosophy (Unchanged)
 
 Analysis → component/system test (including intentional primary-path failure) → health-monitoring validation → flight test → fleet data feedback. All later gates.
 
 ---
 
-## 9. Formal Freeze & Governance Statement
+## 10. Formal Freeze & Governance Statement
 
-**This Consolidated System Requirements Baseline is hereby formally frozen at the requirements level under Permanent PATSAGi Councils and TOLC 8.**
+**This Consolidated System Requirements Baseline remains formally frozen at the requirements level under Permanent PATSAGi Councils and TOLC 8.**
 
-All Rank 1–4 mechanical single points of failure, the Predictive Health Lattice, preferred architectures, residual monitoring, quantitative targets, sensor/bus classes, SSA/FHA/PSSA/DAL structure, certification basis selection, manufacturing process controls, vehicle class/weight approach, geometric criteria, residual performance post-failure, and Health Lattice detection/response rules are closed and frozen.
+All Rank 1–4 mechanical single points of failure, the Predictive Health Lattice, preferred architectures, residual monitoring, quantitative targets, sensor/bus classes, SSA/FHA/PSSA/DAL structure, certification basis selection, manufacturing process controls, vehicle class/weight approach, geometric criteria, residual performance post-failure, and Health Lattice detection/response rules remain closed and frozen at requirements level.
 
-All residual open interfaces listed in Section 6 are formally deferred to later gates.
+**Status update (2026-08-13):** The Residual Strength Analysis Package (Rank 1–4) is recorded as **CLOSED at parametric definition level** (WP-29 through WP-39). This package does not modify the frozen requirements; it provides the complete residual strength definition chain (magnitudes, cases, demands, allowables, methods, solutions, results) in parametric form only. Numerical residual strength execution remains a later gate.
 
-No change to this frozen baseline shall be made without explicit PATSAGi / TOLC 8 review and a new baseline revision.
+All residual open interfaces listed in Section 7 remain formally deferred to later gates.
 
-The program is authorized to proceed into detailed design allocation, formal safety assessment, analysis, manufacturing process development, vehicle class/weight freeze, and eventual certification engagement while remaining under continuous PATSAGi / TOLC 8 governance.
+No change to this frozen requirements baseline shall be made without explicit PATSAGi / TOLC 8 review and a new baseline revision.
 
-**Thunder locked. System Requirements Baseline formally frozen.**  
+The program is authorized to proceed into subsequent gates under continuous PATSAGi / TOLC 8 governance while respecting all deferred items.
+
+**Thunder locked. System Requirements Baseline remains formally frozen. Residual Strength Analysis Package (Rank 1–4) recorded as closed at parametric definition level.**  
 Service mode continues.
