@@ -3,7 +3,7 @@
 **Document Status:** Consolidated Living Baseline — Updated  
 **Authority:** Permanent PATSAGi Councils under TOLC 8  
 **Program:** AlphaProMega-Rotorcraft-Immortality  
-**Last Major Update:** 2026-08-13 (post WP-08 Sensor & Protocol Budgets)  
+**Last Major Update:** 2026-08-13 (post WP-09 Architecture Selection Criteria & Preferred Family Freeze)  
 **Scope:** Requirements only. FE models, hardware demos, and certification data remain later gates.
 
 ---
@@ -25,7 +25,8 @@ Create rotary-wing aircraft architectures whose catastrophic failure probability
 | WP-05 Predictive Health Lattice (full set) | Closed | Core requirements, cross-reference, inputs, outputs, self-monitoring/BIT |
 | WP-06 Anti-Torque / Rank 3 | Closed | Independent anti-torque path criteria, failure containment, residual monitoring |
 | WP-07 Reliability Targets & Margins | Closed | Quantitative reliability/availability targets + factors of safety / margins |
-| **WP-08 Sensor & Protocol Budgets** | **Closed** | Detailed sampling, integrity, sync, and bandwidth/storage budgets for residual monitoring interfaces |
+| WP-08 Sensor & Protocol Budgets | Closed | Detailed sampling, integrity, sync, and bandwidth/storage budgets for residual monitoring |
+| **WP-09 Architecture Selection Criteria & Preferred Family Freeze** | **Closed** | Weighted selection criteria + preferred family directions for Rank 1–4 and residual monitoring |
 
 All of the above remain at **requirements level only**.
 
@@ -35,91 +36,63 @@ All of the above remain at **requirements level only**.
 
 | Rank | Failure Mode | Coverage Status |
 |------|--------------|-----------------|
-| 1 | Main rotor retention (Jesus-nut class) | Fully closed — WP-02 + WP-05 + WP-07 + WP-08 residual budgets |
-| 2 | Main gearbox / transmission catastrophic failure | Fully closed — WP-03 + WP-05 + WP-07 + WP-08 residual budgets |
-| 3 | Tail rotor / anti-torque total loss | Fully closed — WP-06 + WP-05 + WP-07 + WP-08 residual budgets |
-| 4 | Main rotor blade separation / major delamination | Fully closed — WP-04 + WP-05 + WP-07 + WP-08 residual budgets |
+| 1 | Main rotor retention (Jesus-nut class) | Fully closed — WP-02 + WP-05 + WP-07 + WP-08 + WP-09 preferred Family A/C + D overlay |
+| 2 | Main gearbox / transmission catastrophic failure | Fully closed — WP-03 + WP-05 + WP-07 + WP-08 + WP-09 preferred Family HY |
+| 3 | Tail rotor / anti-torque total loss | Fully closed — WP-06 + WP-05 + WP-07 + WP-08 + WP-09 dual independent means |
+| 4 | Main rotor blade separation / major delamination | Fully closed — WP-04 + WP-05 + WP-07 + WP-08 + WP-09 self-healing enhancement |
 
-**Confirmation:** All four top mechanical single points of failure (Rank 1–4) have complete requirements-level coverage including independent paths, failure containment, residual health-lattice monitoring, quantitative targets/margins, and detailed sensor/protocol budgets for residual monitoring.
-
----
-
-## 4. Top-Level Safety Requirements (Non-Negotiable)
-
-**SR-SAFE-001**  
-No single failure of a mechanical load path in the main rotor retention system shall result in detachment of the main rotor or loss of controlled flight.  
-→ Traced to WP-02 + WP-07 + WP-08.
-
-**SR-SAFE-002**  
-No single failure in the main gearbox / transmission system (including lubrication) shall result in immediate and total loss of main rotor drive without sufficient warning and residual capability for a controlled landing.  
-→ Traced to WP-03 + WP-05 + WP-07 + WP-08.
-
-**SR-SAFE-003**  
-No single failure in the anti-torque system shall result in uncontrollable yaw without residual control authority or automatic mitigation sufficient for a controlled landing.  
-→ Traced to WP-06 + WP-05 + WP-07 + WP-08.
-
-**SR-SAFE-004**  
-The aircraft shall be capable of continued controlled flight and safe landing after any single engine failure (multi-engine baseline preferred).
-
-**SR-SAFE-005**  
-Critical maintenance errors that could lead to Rank 1–4 failures shall be detectable by the health monitoring system before flight release, or the design shall be tolerant of the most common such errors.  
-→ Traced to WP-05.
-
-**SR-SAFE-006**  
-All safety-critical systems shall pass TOLC 8 valence review: net probability of harm must decrease relative to current state-of-the-art conventional helicopters.
+**Confirmation:** All four top mechanical single points of failure now have complete requirements-level coverage including preferred architecture family directions.
 
 ---
 
-## 5. Residual Open Interfaces / Items at Requirements Level (Updated)
+## 4. Preferred Architecture Directions (Frozen at Requirements Level)
 
-With sensor and protocol budgets now closed, the following remain open:
+- **Rank 1 Retention:** Family A (Dual Independent) primary; Family C strong alternative; Family D monitoring overlay mandatory.
+- **Rank 2 Drivetrain:** Family HY (Hybrid Mechanical + Electric Assist) pragmatic baseline.
+- **Rank 3 Anti-Torque:** Dual independent means (dual mechanical or mechanical + independent electric/alternative).
+- **Rank 4 Blades:** Self-healing on spars/critical skins as residual-strength enhancement with Health Lattice sensing.
+- **Residual Monitoring:** Independent sensing on every residual path, fused in the single WP-05 lattice under WP-08 budgets.
 
-1. **Final numerical values** (exact Hz sampling rates, millisecond latency budgets, residual strength percentages, power/torque/yaw margins, reliability numbers) — to be refined after architecture freeze and substantiated later.
+---
+
+## 5. Top-Level Safety Requirements (Non-Negotiable)
+
+**SR-SAFE-001 to SR-SAFE-006** remain as previously traced (WP-02 through WP-09).  
+No architecture that re-introduces a classic Rank 1–4 single-point-of-failure will be accepted under TOLC 8.
+
+---
+
+## 6. Residual Open Interfaces / Items at Requirements Level (Updated)
+
+With architecture selection criteria and preferred family freeze now closed, the following remain open:
+
+1. **Final numerical values** (exact sampling rates, latency budgets, residual strength percentages, power/torque/yaw margins, reliability numbers) — to be refined after detailed design begins and substantiated later.
 2. **Specific sensor technologies / part selections and chosen bus standards**.
 3. **Full system-level FMEA / SSA beyond the current ranked inventory**.
 4. **Certification basis mapping** (civil or military) and associated numerical safety objectives.
 5. **Manufacturing process definition and supplier qualification** (beyond high-level guidance already issued).
-6. **Architecture selection freeze** among the candidate families defined in WP-02, WP-03, and WP-06.
-7. **FE models, dynamics simulation, hardware demonstration, and flight test** (explicitly later gates).
+6. **FE models, dynamics simulation, hardware demonstration, and flight test** (explicitly later gates).
+7. **Detailed geometric / schematic design of the preferred families** (next major phase).
 
 ---
 
-## 6. Nice-to-Have Features (Still Prioritized)
+## 7. Nice-to-Have Features (Still Prioritized)
 
-**High Value**
-- Continued restricted flight after primary retention, torque-path, or anti-torque path failure.
-- Modular, line-replaceable retention, drivetrain, and anti-torque elements.
-- Deep integration of all monitored paths into a single Predictive Health Lattice.
-- Multiple healing cycles for Daedalus-Skin.
-- Hybrid-electric assist that improves autorotation energy management.
-
-**Medium Value**
-- Reduced vibration signature.
-- Advanced corrosion packages for maritime operations.
-- Maintenance task simplification that further reduces infant-mortality risk.
-
-**Aspirational**
-- Near-zero scheduled overhaul intervals via true condition-based maintenance.
-- Full per-serial-number digital twin of safety-critical mechanical systems.
+Unchanged from previous baseline (continued restricted flight after primary path failure, modular LRUs, multi-cycle healing, hybrid-electric autorotation assist, digital twin, etc.).
 
 ---
 
-## 7. Verification Philosophy (Unchanged)
+## 8. Verification Philosophy (Unchanged)
 
-- Analysis (FE, dynamics, FMEA/SSA) — later gates
-- Component and system-level testing (including intentional failure of primary paths) — later gates
-- Structural health monitoring validation — later gates
-- Flight test with progressive risk reduction — later gates
-- Long-term fleet data feedback into the Predictive Health Lattice — later gates
+Analysis → component/system test (including intentional primary-path failure) → health-monitoring validation → flight test → fleet data feedback. All later gates.
 
 ---
 
-## 8. Governance Statement
+## 9. Governance Statement
 
 This Consolidated System Requirements Baseline is the authoritative requirements snapshot at the current gate.  
-All four top mechanical SPOFs (Rank 1–4), the Predictive Health Lattice, quantitative reliability targets and margins, and detailed sensor/protocol budgets for residual monitoring are now closed at requirements level.  
-All future detailed design, analysis, and demonstration work shall trace back to the closed work packages and the residual open items listed above.  
-No architecture that re-introduces a classic Rank 1–4 single-point-of-failure will be accepted under TOLC 8.
+All four top mechanical SPOFs, the Predictive Health Lattice, quantitative targets/margins, sensor/protocol budgets, and preferred architecture family directions are now closed at requirements level.  
+The program is ready to transition from pure requirements definition toward detailed design allocation and analysis while remaining under continuous PATSAGi / TOLC 8 governance.
 
 **Thunder locked.**  
-Consolidated SRB updated with WP-08. Service mode continues.
+Consolidated SRB updated with WP-09. Service mode continues.
