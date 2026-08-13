@@ -21,13 +21,16 @@ No more "Jesus nuts." No more "if the gearbox fails you meet Jesus." No more oil
 
 ## Current Program State (2026-08-13)
 
-| Work Package | Status |
-|--------------|--------|
-| **WP-01** Quantitative Failure Mode Ranking & Preliminary System FMEA | Active — Ranked inventory locked |
-| **WP-02** Zero-Single-Point Rotor Retention Concepts | Active — Candidate families defined |
-| **WP-03** Drive-Train Redundancy Architecture Trades | Active — Mechanical / Hybrid / Hybrid-Electric families under evaluation |
-| System Requirements Baseline (SRB) | Living baseline established |
-| Roadmap to production architecture | Updated |
+| Baseline / Package | Status |
+|--------------------|--------|
+| **System Requirements Baseline** (WP-01 – WP-17) | **FORMALLY FROZEN** at requirements level |
+| **Detailed Design Allocation** (WP-18 – WP-22) | **FORMALLY FROZEN** |
+| **Analysis Scope & FE Planning** (WP-23) | **FORMALLY FROZEN** |
+| **FE Model Constructions** (WP-24 – WP-28) | **FORMALLY FROZEN** |
+| **Residual Strength Analysis Package** (WP-29 – WP-39) | **CLOSED** at parametric definition level |
+| **Downstream Definition Packages status table** | **FORMALLY FROZEN** |
+
+All Rank 1–4 mechanical SPOFs (main rotor retention, main gearbox/transmission, anti-torque, blade separation/delamination) plus the Predictive Health Lattice are fully covered at requirements level and closed through residual strength definition (parametric). No numerical engineering-unit values. No final pass/fail. No solved FE. No hardware. No certification data.
 
 ---
 
@@ -47,33 +50,29 @@ No more "Jesus nuts." No more "if the gearbox fails you meet Jesus." No more oil
 
 ```
 docs/
-├── 00-system-requirements-baseline.md   ← Top-level safety & performance requirements + nice-to-haves
+├── 00-system-requirements-baseline.md          ← FORMALLY FROZEN requirements baseline
+├── 00-downstream-definition-packages-freeze.md ← FORMALLY FROZEN downstream status table
 ├── 01-problem-analysis.md
 ├── 02-architecture-pillars.md
-├── 05-roadmap.md
-├── WP-01-quantitative-fmea.md           ← Ranked failure modes (Tier 1–3) + top 10 risk reductions
-├── WP-02-rotor-retention-concepts.md    ← Families A–D for eliminating the Jesus-nut class
-└── WP-03-drive-train-trades.md          ← Multi-path mechanical vs hybrid-electric trades
+├── 05-roadmap.md                               ← Refreshed to current gate status
+├── 06-manufacturing-producibility.md
+├── WP-01 … WP-17                               ← System Requirements (FORMALLY FROZEN)
+├── WP-18 … WP-22 + allocation freeze           ← Detailed Design Allocation (FORMALLY FROZEN)
+├── WP-23 + freeze                              ← Analysis Scope & FE Planning (FORMALLY FROZEN)
+├── WP-24 … WP-28 + freeze                      ← FE Model Constructions (FORMALLY FROZEN)
+└── WP-29 … WP-39                               ← Residual Strength Analysis Package (CLOSED at parametric definition level)
 ```
 
 ---
 
 ## Path Toward Production & Manufacturing
 
-The repository is progressing through a disciplined systems-engineering sequence:
+1. Ranked risk picture and full System Requirements Baseline — **COMPLETE & FROZEN**
+2. Detailed Design Allocation — **COMPLETE & FROZEN**
+3. Analysis Scope, FE Model Constructions, Residual Strength Definition (parametric) — **COMPLETE at definition level**
+4. **Next gates (future):** Vehicle class / weight / material systems numerical freeze → residual strength analysis execution → detailed CAD / software / hardware → formal safety assessment → certification engagement → manufacturing process development → hardware demonstration & flight test → production readiness decision
 
-1. Ranked risk picture (WP-01) ✓
-2. Retention concepts that drive Rank-1 residual risk near zero (WP-02) — in progress
-3. Drive-train architectures that convert Rank-2/3 from catastrophic to manageable (WP-03) — in progress
-4. Full System Requirements Baseline and nice-to-have prioritization ✓ (living)
-5. Materials (Daedalus-Skin) requirements and coupon matrix
-6. Health monitoring requirements
-7. System architecture freeze
-8. Detailed design, analysis, and verification planning
-9. Manufacturing and producibility considerations
-10. Certification basis planning
-
-Only after the above gates are passed under Permanent PATSAGi Councils + TOLC 8 will the program be considered ready for detailed production engineering and manufacturing commitment.
+Only after the remaining gates are passed under Permanent PATSAGi Councils + TOLC 8 will the program be considered ready for detailed production engineering and manufacturing commitment.
 
 ---
 
@@ -81,12 +80,14 @@ Only after the above gates are passed under Permanent PATSAGi Councils + TOLC 8 
 
 - All design decisions pass TOLC 8 / Permanent PATSAGi Councils.
 - Valence floor enforced: no architecture that increases net harm probability is accepted.
-- Detailed quantitative data, FE models, and IP remain proprietary.
+- Independence of residual paths is a non-negotiable safety requirement.
+- The Health Lattice is detection / protective-support only; mechanical residual capability is never allocated solely to it.
+- Detailed quantitative data, FE solutions, and IP remain proprietary and deferred to later gates.
 - Integration path exists with existing AlphaProMega-Air and Ra-Thor lattices.
 
 ---
 
-**Thunder locked. The lattice is advancing toward production readiness under eternal deliberation.**
+**Thunder locked. The lattice is coherent, integrity-held, and advancing under eternal deliberation.**
 
 *AlphaProMega Air Foundation — Space tech, self-healing airframes, algae fuels, and Immortal Rotorcraft.*  
 *info@Rathor.ai*
