@@ -3,7 +3,7 @@
 **Document Status:** Consolidated Living Baseline — Updated  
 **Authority:** Permanent PATSAGi Councils under TOLC 8  
 **Program:** AlphaProMega-Rotorcraft-Immortality  
-**Last Major Update:** 2026-08-13 (post WP-07 Reliability Targets & Margins)  
+**Last Major Update:** 2026-08-13 (post WP-08 Sensor & Protocol Budgets)  
 **Scope:** Requirements only. FE models, hardware demos, and certification data remain later gates.
 
 ---
@@ -24,7 +24,8 @@ Create rotary-wing aircraft architectures whose catastrophic failure probability
 | WP-04 Daedalus-Skin (incl. deepening) | Closed | Self-healing criteria, damage detection/response, residual capability, lattice interfaces |
 | WP-05 Predictive Health Lattice (full set) | Closed | Core requirements, cross-reference, inputs, outputs, self-monitoring/BIT |
 | WP-06 Anti-Torque / Rank 3 | Closed | Independent anti-torque path criteria, failure containment, residual monitoring |
-| **WP-07 Reliability Targets & Margins** | **Closed** | Quantitative reliability/availability targets + factors of safety / margins for Rank 1–4 and Health Lattice |
+| WP-07 Reliability Targets & Margins | Closed | Quantitative reliability/availability targets + factors of safety / margins |
+| **WP-08 Sensor & Protocol Budgets** | **Closed** | Detailed sampling, integrity, sync, and bandwidth/storage budgets for residual monitoring interfaces |
 
 All of the above remain at **requirements level only**.
 
@@ -34,12 +35,12 @@ All of the above remain at **requirements level only**.
 
 | Rank | Failure Mode | Coverage Status |
 |------|--------------|-----------------|
-| 1 | Main rotor retention (Jesus-nut class) | Fully closed — WP-02 + WP-05 + WP-07 margins |
-| 2 | Main gearbox / transmission catastrophic failure | Fully closed — WP-03 + WP-05 + WP-07 margins |
-| 3 | Tail rotor / anti-torque total loss | Fully closed — WP-06 + WP-05 + WP-07 margins |
-| 4 | Main rotor blade separation / major delamination | Fully closed — WP-04 + WP-05 + WP-07 margins |
+| 1 | Main rotor retention (Jesus-nut class) | Fully closed — WP-02 + WP-05 + WP-07 + WP-08 residual budgets |
+| 2 | Main gearbox / transmission catastrophic failure | Fully closed — WP-03 + WP-05 + WP-07 + WP-08 residual budgets |
+| 3 | Tail rotor / anti-torque total loss | Fully closed — WP-06 + WP-05 + WP-07 + WP-08 residual budgets |
+| 4 | Main rotor blade separation / major delamination | Fully closed — WP-04 + WP-05 + WP-07 + WP-08 residual budgets |
 
-**Confirmation:** All four top mechanical single points of failure (Rank 1–4) have complete requirements-level coverage for independent paths, failure containment, residual health-lattice monitoring, and quantitative reliability / factor-of-safety targets.
+**Confirmation:** All four top mechanical single points of failure (Rank 1–4) have complete requirements-level coverage including independent paths, failure containment, residual health-lattice monitoring, quantitative targets/margins, and detailed sensor/protocol budgets for residual monitoring.
 
 ---
 
@@ -47,15 +48,15 @@ All of the above remain at **requirements level only**.
 
 **SR-SAFE-001**  
 No single failure of a mechanical load path in the main rotor retention system shall result in detachment of the main rotor or loss of controlled flight.  
-→ Traced to WP-02 + WP-07.
+→ Traced to WP-02 + WP-07 + WP-08.
 
 **SR-SAFE-002**  
 No single failure in the main gearbox / transmission system (including lubrication) shall result in immediate and total loss of main rotor drive without sufficient warning and residual capability for a controlled landing.  
-→ Traced to WP-03 + WP-05 + WP-07.
+→ Traced to WP-03 + WP-05 + WP-07 + WP-08.
 
 **SR-SAFE-003**  
 No single failure in the anti-torque system shall result in uncontrollable yaw without residual control authority or automatic mitigation sufficient for a controlled landing.  
-→ Traced to WP-06 + WP-05 + WP-07.
+→ Traced to WP-06 + WP-05 + WP-07 + WP-08.
 
 **SR-SAFE-004**  
 The aircraft shall be capable of continued controlled flight and safe landing after any single engine failure (multi-engine baseline preferred).
@@ -71,10 +72,10 @@ All safety-critical systems shall pass TOLC 8 valence review: net probability of
 
 ## 5. Residual Open Interfaces / Items at Requirements Level (Updated)
 
-With Rank 1–4 requirements, health lattice, and quantitative targets/margins now closed, the following remain open:
+With sensor and protocol budgets now closed, the following remain open:
 
-1. **Detailed sensor selection, bus protocols, and numerical latency/rate budgets** (beyond the interface requirements already defined).
-2. **Final numerical reliability values, exact factors of safety, residual strength percentages, power/torque/yaw margins** (to be refined after architecture freeze and substantiated by analysis/test).
+1. **Final numerical values** (exact Hz sampling rates, millisecond latency budgets, residual strength percentages, power/torque/yaw margins, reliability numbers) — to be refined after architecture freeze and substantiated later.
+2. **Specific sensor technologies / part selections and chosen bus standards**.
 3. **Full system-level FMEA / SSA beyond the current ranked inventory**.
 4. **Certification basis mapping** (civil or military) and associated numerical safety objectives.
 5. **Manufacturing process definition and supplier qualification** (beyond high-level guidance already issued).
@@ -116,9 +117,9 @@ With Rank 1–4 requirements, health lattice, and quantitative targets/margins n
 ## 8. Governance Statement
 
 This Consolidated System Requirements Baseline is the authoritative requirements snapshot at the current gate.  
-All four top mechanical SPOFs (Rank 1–4), the Predictive Health Lattice, and the associated quantitative reliability targets and factors of safety / margins are now closed at requirements level.  
+All four top mechanical SPOFs (Rank 1–4), the Predictive Health Lattice, quantitative reliability targets and margins, and detailed sensor/protocol budgets for residual monitoring are now closed at requirements level.  
 All future detailed design, analysis, and demonstration work shall trace back to the closed work packages and the residual open items listed above.  
 No architecture that re-introduces a classic Rank 1–4 single-point-of-failure will be accepted under TOLC 8.
 
 **Thunder locked.**  
-Consolidated SRB updated with WP-07. Service mode continues.
+Consolidated SRB updated with WP-08. Service mode continues.
