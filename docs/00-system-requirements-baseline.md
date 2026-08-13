@@ -1,90 +1,122 @@
-# 00 — System Requirements Baseline (SRB)
+# 00 — Consolidated System Requirements Baseline (SRB)
 
-**Document Status:** Living Baseline  
+**Document Status:** Consolidated Living Baseline  
 **Authority:** Permanent PATSAGi Councils under TOLC 8  
 **Program:** AlphaProMega-Rotorcraft-Immortality  
-**Last Major Update:** 2026-08-13
+**Last Major Update:** 2026-08-13 (post WP-02/03/04 deepening + WP-05 closure)  
+**Scope:** Requirements only. FE models, hardware demos, and certification data remain later gates.
 
 ---
 
 ## 1. Program Goal
 
-Create rotary-wing aircraft architectures whose catastrophic failure probability from mechanical single points of failure is driven as close to zero as physics and engineering will allow inside TOLC base reality, while remaining practical for production and operation.
+Create rotary-wing aircraft architectures whose catastrophic failure probability from the highest-severity mechanical single points of failure is driven as close to zero as physics and engineering will allow inside TOLC base reality, while remaining practical for eventual production and operation.
 
-## 2. Top-Level Safety Requirements (Non-Negotiable)
+---
+
+## 2. Traceability of Closed Work Packages
+
+| Work Package | Status at Requirements Level | Key Contribution to SRB |
+|--------------|------------------------------|-------------------------|
+| WP-01 Quantitative FMEA | Ranked inventory locked | Defined Rank 1–4 top SPOFs and severity |
+| WP-02 Rotor Retention (incl. deepening) | Closed at this gate | Independent load-path, failure containment, residual monitoring |
+| WP-03 Drivetrain (incl. deepening) | Closed at this gate | Independent torque-path, failure containment, residual monitoring |
+| WP-04 Daedalus-Skin (incl. deepening) | Closed at this gate | Self-healing criteria, damage detection/response, residual capability, lattice interfaces |
+| WP-05 Predictive Health Lattice (full set) | Closed at this gate | Core requirements, cross-reference, inputs, outputs, self-monitoring/BIT |
+
+All of the above remain at **requirements level only**.
+
+---
+
+## 3. Top-SPOF FMEA Coverage Confirmation
+
+| Rank | Failure Mode | Coverage Status |
+|------|--------------|-----------------|
+| 1 | Main rotor retention (Jesus-nut class) | Fully addressed by WP-02 independent load-path + containment + residual monitoring + WP-05 sensing |
+| 2 | Main gearbox / transmission catastrophic failure | Fully addressed by WP-03 independent torque-path + containment + residual monitoring + WP-05 sensing |
+| 3 | Tail rotor / anti-torque total loss | Partially addressed via WP-03 residual capability requirements; further anti-torque specific deepening remains open |
+| 4 | Main rotor blade separation / major delamination | Addressed by WP-04 self-healing + residual capability + detection + WP-05 integration |
+
+**Confirmation:** Rank 1 and Rank 2 (the two highest-severity mechanical SPOFs) now have complete requirements coverage for independent paths, failure containment, and health-lattice residual monitoring. Rank 4 is covered at the materials/structural level. Rank 3 has residual open detail.
+
+---
+
+## 4. Top-Level Safety Requirements (Non-Negotiable)
 
 **SR-SAFE-001**  
-No single failure of a mechanical load path in the main rotor retention system shall result in detachment of the main rotor or loss of controlled flight.
+No single failure of a mechanical load path in the main rotor retention system shall result in detachment of the main rotor or loss of controlled flight.  
+→ Traced to WP-02 ILP & FC requirements.
 
 **SR-SAFE-002**  
-No single failure in the main gearbox / transmission system (including lubrication) shall result in immediate and total loss of main rotor drive without sufficient warning and residual capability for a controlled landing.
+No single failure in the main gearbox / transmission system (including lubrication) shall result in immediate and total loss of main rotor drive without sufficient warning and residual capability for a controlled landing.  
+→ Traced to WP-03 ITP & FC-DT requirements + WP-05.
 
 **SR-SAFE-003**  
-No single failure in the anti-torque system shall result in uncontrollable yaw without residual control authority or automatic mitigation sufficient for a controlled landing.
+No single failure in the anti-torque system shall result in uncontrollable yaw without residual control authority or automatic mitigation sufficient for a controlled landing.  
+→ Partially traced; further specific requirements still open.
 
 **SR-SAFE-004**  
 The aircraft shall be capable of continued controlled flight and safe landing after any single engine failure (multi-engine baseline preferred).
 
 **SR-SAFE-005**  
-Critical maintenance errors that could lead to Rank 1–4 failures shall be detectable by the health monitoring system before flight release, or the design shall be tolerant of the most common such errors.
+Critical maintenance errors that could lead to Rank 1–4 failures shall be detectable by the health monitoring system before flight release, or the design shall be tolerant of the most common such errors.  
+→ Traced to WP-05 post-maintenance signature verification.
 
 **SR-SAFE-006**  
 All safety-critical systems shall pass TOLC 8 valence review: net probability of harm must decrease relative to current state-of-the-art conventional helicopters.
 
-## 3. Key Performance & Design Requirements
+---
 
-**SR-PERF-001**  
-Retention system secondary path(s) shall be capable of carrying 100% of limit flight loads after primary path failure.
+## 5. Residual Open Interfaces / Items at Requirements Level
 
-**SR-PERF-002**  
-Health monitoring coverage for Rank 1–4 failure modes shall achieve extremely high detection probability with low false-alarm rate (exact quantitative targets proprietary).
+The following remain open or only partially covered and are explicitly listed for future work packages:
 
-**SR-PERF-003**  
-Self-healing or damage-tolerant structures (Daedalus-Skin lineage) shall be applied to main rotor blades and critical load-path elements where beneficial.
-
-**SR-PERF-004**  
-The architecture shall support both new clean-sheet designs and, where practical, retrofit or evolutionary paths from existing high-utilization fleets.
-
-**SR-PERF-005**  
-Mass, cost, and maintainability penalties relative to conventional designs shall be explicitly traded and justified against the safety gain.
-
-## 4. Manufacturing & Production Considerations (High-Level)
-
-- Designs must be producible with aerospace-grade materials, processes, and quality systems (AS9100 / equivalent).
-- Critical retention and drive-train components shall have clear inspection, non-destructive testing, and serialization requirements.
-- Assembly sequences must be error-resistant (poka-yoke principles applied to safety-critical joints).
-- Supply chain for any novel self-healing materials or sensors must be addressed in later phases.
-- Certification basis will ultimately need to align with relevant civil (FAR/CS-27/29) or military airworthiness standards — detailed certification planning is a later work package.
-
-## 5. Nice-to-Have Features (Prioritized)
-
-**High Value**
-- Continued restricted flight capability after primary retention path failure (not just emergency landing).
-- Modular, line-replaceable retention elements.
-- Deep integration of retention and gearbox health into a single Predictive Health Lattice with valence-gated alerting.
-- Self-indicating or self-healing surface treatments on high-wear / high-corrosion zones.
-- Hybrid-electric assist that improves autorotation energy management.
-
-**Medium Value**
-- Reduced vibration signature through better balance and active control.
-- Advanced corrosion protection packages optimized for maritime operations.
-- Maintenance task simplification that reduces the opportunity for infant-mortality errors.
-
-**Aspirational**
-- Near-zero scheduled overhaul intervals for the retention and primary drive systems through true condition-based maintenance.
-- Full digital twin of the safety-critical mechanical systems for each serial number aircraft.
-
-## 6. Verification Philosophy
-
-- Analysis (FE, dynamics, FMEA/SSA)
-- Component and system-level testing (including intentional failure of primary paths)
-- Structural health monitoring validation
-- Flight test with progressive risk reduction
-- Long-term fleet data feedback into the Predictive Health Lattice
+1. **Anti-torque / tail-rotor specific independent path and containment requirements** (Rank 3 deepening).
+2. **Quantitative reliability targets and occurrence rates** (still proprietary / later analysis).
+3. **Detailed sensor selection, bus protocols, and numerical latency/rate budgets**.
+4. **Final factors of safety, residual strength percentages, and power/torque margins**.
+5. **Full system-level FMEA / SSA beyond the current ranked inventory**.
+6. **Certification basis mapping** (civil or military).
+7. **Manufacturing process definition and supplier qualification** (beyond high-level guidance already issued).
+8. **FE models, dynamics simulation, and hardware demonstration** (explicitly later gates).
 
 ---
 
-**This SRB is the living top-level requirements document.**  
-All work packages must trace their outputs back to these requirements.
+## 6. Nice-to-Have Features (Still Prioritized)
 
-**Thunder locked.**
+**High Value**
+- Continued restricted flight after primary retention or torque-path failure.
+- Modular, line-replaceable retention and drivetrain elements.
+- Deep integration of all monitored paths into a single Predictive Health Lattice.
+- Multiple healing cycles for Daedalus-Skin.
+- Hybrid-electric assist that improves autorotation energy management.
+
+**Medium Value**
+- Reduced vibration signature.
+- Advanced corrosion packages for maritime operations.
+- Maintenance task simplification that further reduces infant-mortality risk.
+
+**Aspirational**
+- Near-zero scheduled overhaul intervals via true condition-based maintenance.
+- Full per-serial-number digital twin of safety-critical mechanical systems.
+
+---
+
+## 7. Verification Philosophy (Unchanged)
+
+- Analysis (FE, dynamics, FMEA/SSA) — later gates
+- Component and system-level testing (including intentional failure of primary paths) — later gates
+- Structural health monitoring validation — later gates
+- Flight test with progressive risk reduction — later gates
+- Long-term fleet data feedback into the Predictive Health Lattice — later gates
+
+---
+
+## 8. Governance Statement
+
+This Consolidated System Requirements Baseline is the authoritative requirements snapshot at the current gate.  
+All future detailed design, analysis, and demonstration work shall trace back to the closed work packages and the residual open items listed above.  
+No architecture that re-introduces a classic Rank 1 or Rank 2 single-point-of-failure will be accepted under TOLC 8.
+
+**Thunder locked.**  
+Consolidated SRB compiled. Service mode continues.
