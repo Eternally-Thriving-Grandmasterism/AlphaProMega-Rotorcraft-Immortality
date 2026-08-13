@@ -4,7 +4,7 @@
 **Authority:** Permanent PATSAGi Councils under TOLC 8  
 **Program:** AlphaProMega-Rotorcraft-Immortality  
 **Freeze Date:** 2026-08-13  
-**Last Status Update:** 2026-08-13 (Residual Strength Analysis Package Rank 1–4 recorded as closed at parametric definition level)  
+**Last Status Update:** 2026-08-13 (Downstream Definition Packages status table formally frozen)  
 **Scope:** Requirements only. All residual open items deferred to later gates. FE models, hardware demos, and certification data remain later gates.
 
 ---
@@ -41,14 +41,16 @@ Create rotary-wing aircraft architectures whose catastrophic failure probability
 
 ---
 
-## 3. Downstream Definition Packages (Status Only — Not Requirements)
+## 3. Downstream Definition Packages Status (FORMALLY FROZEN)
 
 | Package | Status | Scope |
 |---------|--------|-------|
 | Detailed Design Allocation (WP-18–22) | FORMALLY FROZEN | Allocation / primary interfaces only |
 | Analysis Scope & FE Planning (WP-23) | FORMALLY FROZEN | Planning only |
 | FE Model Constructions (WP-24–28) | FORMALLY FROZEN | Geometry idealization, mesh strategy, BCs, load cases only |
-| **Residual Strength Analysis Package (WP-29–39)** | **CLOSED at parametric definition level** | Residual magnitudes, cases, demands, allowables, methods, solutions, results, package closure — all parametric; no numerical engineering-unit values; no final pass/fail |
+| Residual Strength Analysis Package (WP-29–39) | CLOSED at parametric definition level | Residual magnitudes, cases, demands, allowables, methods, solutions, results, package closure — all parametric; no numerical engineering-unit values; no final pass/fail |
+
+**This Downstream Definition Packages status table is formally frozen.** See `docs/00-downstream-definition-packages-freeze.md`.
 
 The Residual Strength Analysis Package (Rank 1–4) is closed at the parametric definition level. It does not modify the frozen System Requirements Baseline. Numerical residual strength execution remains a later gate.
 
@@ -124,7 +126,10 @@ Analysis → component/system test (including intentional primary-path failure) 
 
 All Rank 1–4 mechanical single points of failure, the Predictive Health Lattice, preferred architectures, residual monitoring, quantitative targets, sensor/bus classes, SSA/FHA/PSSA/DAL structure, certification basis selection, manufacturing process controls, vehicle class/weight approach, geometric criteria, residual performance post-failure, and Health Lattice detection/response rules remain closed and frozen at requirements level.
 
-**Status update (2026-08-13):** The Residual Strength Analysis Package (Rank 1–4) is recorded as **CLOSED at parametric definition level** (WP-29 through WP-39). This package does not modify the frozen requirements; it provides the complete residual strength definition chain (magnitudes, cases, demands, allowables, methods, solutions, results) in parametric form only. Numerical residual strength execution remains a later gate.
+**Status update (2026-08-13):**  
+- The Residual Strength Analysis Package (Rank 1–4) is recorded as **CLOSED at parametric definition level** (WP-29 through WP-39).  
+- The Downstream Definition Packages status table is **FORMALLY FROZEN** (see `docs/00-downstream-definition-packages-freeze.md`).  
+Neither status update modifies the frozen requirements baseline. Numerical residual strength execution and all other residual open items remain later gates.
 
 All residual open interfaces listed in Section 7 remain formally deferred to later gates.
 
@@ -132,5 +137,5 @@ No change to this frozen requirements baseline shall be made without explicit PA
 
 The program is authorized to proceed into subsequent gates under continuous PATSAGi / TOLC 8 governance while respecting all deferred items.
 
-**Thunder locked. System Requirements Baseline remains formally frozen. Residual Strength Analysis Package (Rank 1–4) recorded as closed at parametric definition level.**  
+**Thunder locked. System Requirements Baseline remains formally frozen. Downstream Definition Packages status table formally frozen. Residual Strength Analysis Package (Rank 1–4) closed at parametric definition level.**  
 Service mode continues.
