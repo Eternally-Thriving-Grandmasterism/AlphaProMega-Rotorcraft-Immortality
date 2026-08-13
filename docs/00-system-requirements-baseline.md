@@ -1,10 +1,10 @@
 # 00 — Consolidated System Requirements Baseline (SRB)
 
-**Document Status:** Consolidated Living Baseline — Updated  
+**Document Status:** FORMALLY FROZEN at Requirements Level  
 **Authority:** Permanent PATSAGi Councils under TOLC 8  
 **Program:** AlphaProMega-Rotorcraft-Immortality  
-**Last Major Update:** 2026-08-13 (post WP-17 Residual Performance Criteria & Health Lattice Detection/Response Rules)  
-**Scope:** Requirements only. FE models, hardware demos, and certification data remain later gates.
+**Freeze Date:** 2026-08-13  
+**Scope:** Requirements only. All residual open items deferred to later gates. FE models, hardware demos, and certification data remain later gates.
 
 ---
 
@@ -14,7 +14,7 @@ Create rotary-wing aircraft architectures whose catastrophic failure probability
 
 ---
 
-## 2. Traceability of Closed Work Packages
+## 2. Traceability of Closed Work Packages (Frozen)
 
 | Work Package | Status at Requirements Level | Key Contribution to SRB |
 |--------------|------------------------------|-------------------------|
@@ -34,26 +34,26 @@ Create rotary-wing aircraft architectures whose catastrophic failure probability
 | WP-14 Manufacturing Process Definition & Process Controls | Closed | Requirements-level process definition and process controls for Rank 1–4 critical items and Health Lattice |
 | WP-15 Vehicle Class Selection Criteria & Weight Freeze Approach | Closed | Criteria for class selection and approach for maximum weight freeze |
 | WP-16 Geometric Design Criteria & Residual Capability Preservation Rules | Closed | Geometric criteria, constraints, and residual capability preservation rules |
-| **WP-17 Residual Performance Criteria & Health Lattice Detection/Response Rules** | **Closed** | Residual performance after primary path failure + Health Lattice detection and response rules |
+| WP-17 Residual Performance Criteria & Health Lattice Detection/Response Rules | Closed | Residual performance after primary path failure + Health Lattice detection and response rules |
 
-All of the above remain at **requirements level only**.
+**All of the above are formally frozen at requirements level.**
 
 ---
 
-## 3. Top-SPOF FMEA Coverage Confirmation
+## 3. Top-SPOF FMEA Coverage Confirmation (Frozen)
 
 | Rank | Failure Mode | Coverage Status |
 |------|--------------|-----------------|
-| 1 | Main rotor retention | Fully closed at requirements level |
-| 2 | Main gearbox / transmission | Fully closed at requirements level |
-| 3 | Anti-torque / tail rotor | Fully closed at requirements level |
-| 4 | Blade separation / delamination | Fully closed at requirements level |
+| 1 | Main rotor retention | Fully closed and frozen at requirements level |
+| 2 | Main gearbox / transmission | Fully closed and frozen at requirements level |
+| 3 | Anti-torque / tail rotor | Fully closed and frozen at requirements level |
+| 4 | Blade separation / delamination | Fully closed and frozen at requirements level |
 
-All four top mechanical SPOFs plus the Predictive Health Lattice now have complete requirements coverage including preferred architectures, residual monitoring, quantitative targets, sensor/bus classes, SSA/FHA/PSSA/DAL structure, certification basis selection, manufacturing process controls, vehicle class/weight approach, geometric criteria, residual performance post-failure, and Health Lattice detection/response rules.
+All four top mechanical SPOFs plus the Predictive Health Lattice are fully covered at requirements level.
 
 ---
 
-## 4. Preferred Architecture, Sensing, Certification, Manufacturing, Class & Performance Directions (Frozen at Requirements Level)
+## 4. Preferred Directions (Frozen at Requirements Level)
 
 - **Rank 1 Retention:** Family A primary + Family C alternative; Family D monitoring overlay mandatory. Residual path retains rotor under limit loads and permits controlled landing.
 - **Rank 2 Drivetrain:** Family HY (Hybrid Mechanical + Electric Assist) baseline. Residual torque/power for controlled landing after primary path loss.
@@ -62,12 +62,12 @@ All four top mechanical SPOFs plus the Predictive Health Lattice now have comple
 - **Residual Monitoring Sensors / Buses:** Preferred classes and digital-preferring bus approaches per WP-10.
 - **Certification:** Preferred primary path is civil rotorcraft (FAR/CS-27 or -29 by vehicle class); military airworthiness path kept open and compatible.
 - **Manufacturing:** AS9100-level quality system, critical characteristic control, error-resistant assembly, serialization, and rank-specific process controls per WP-14.
-- **Vehicle Class / Weight:** Selection criteria and freeze approach defined in WP-15; actual class and numerical weight freeze remain open.
+- **Vehicle Class / Weight:** Selection criteria and freeze approach defined in WP-15; actual class and numerical weight freeze deferred.
 - **Residual Performance & Health Lattice Response:** Post-failure residual performance and detection/response rules defined in WP-17.
 
 ---
 
-## 5. Top-Level Safety Requirements (Non-Negotiable)
+## 5. Top-Level Safety Requirements (Non-Negotiable, Frozen)
 
 SR-SAFE-001 to SR-SAFE-006 remain as previously traced.  
 Independence of paths is a safety requirement. The Health Lattice is a detection / protective-support layer, not the sole residual means.  
@@ -75,24 +75,24 @@ No architecture that re-introduces a classic Rank 1–4 single-point-of-failure 
 
 ---
 
-## 6. Residual Open Interfaces / Items at Requirements Level (Updated)
+## 6. Residual Open Interfaces — Formally Deferred to Later Gates
 
-With residual performance criteria and Health Lattice detection/response rules now closed, the following remain open:
+The following items are explicitly deferred. They are not open requirements-level work; they are later-gate activities:
 
-1. **Final numerical values** (exact sampling rates, latency, residual strength %, margins, residual torque/yaw authority numbers, reliability numbers).
-2. **Specific sensor part numbers / manufacturer selections and final bus standard + ICD.**
-3. **Completed FHA worksheets, full PSSA/SSA documents, and final DAL allocations under the chosen certification basis.**
-4. **Formal engagement with certification authority and detailed compliance matrix / issue papers.**
-5. **Detailed work instructions, supplier process qualifications, first-article data, and SPC limits.**
-6. **FE models, dynamics simulation, hardware demonstration, and flight test** (explicitly later gates).
-7. **Detailed geometric / schematic design (CAD) of the preferred families.**
-8. **Actual vehicle class declaration and numerical maximum weight freeze.**
+1. **Final numerical values** (exact sampling rates, latency, residual strength %, margins, residual torque/yaw authority numbers, reliability numbers) — Detailed Design / Analysis gates.
+2. **Specific sensor part numbers / manufacturer selections and final bus standard + ICD** — Detailed Design / Supplier Selection gates.
+3. **Completed FHA worksheets, full PSSA/SSA documents, and final DAL allocations under the chosen certification basis** — Formal Safety Assessment gate.
+4. **Formal engagement with certification authority and detailed compliance matrix / issue papers** — Certification Engagement gate.
+5. **Detailed work instructions, supplier process qualifications, first-article data, and SPC limits** — Manufacturing Process Development / Production gates.
+6. **FE models, dynamics simulation, hardware demonstration, and flight test** — Analysis / Test / Flight gates.
+7. **Detailed geometric / schematic design (CAD) of the preferred families** — Detailed Design gate.
+8. **Actual vehicle class declaration and numerical maximum weight freeze** — Vehicle Definition / Weight Freeze gate.
 
 ---
 
-## 7. Nice-to-Have Features (Still Prioritized)
+## 7. Nice-to-Have Features (Still Prioritized, Not Frozen Requirements)
 
-Unchanged (continued restricted flight after primary path failure, modular LRUs, multi-cycle healing, hybrid-electric autorotation assist, digital twin, etc.).
+Continued restricted flight after primary path failure, modular LRUs, multi-cycle healing, hybrid-electric autorotation assist, digital twin, reduced vibration, advanced corrosion packages, maintenance task simplification, near-zero scheduled overhaul via true condition-based maintenance.
 
 ---
 
@@ -102,11 +102,17 @@ Analysis → component/system test (including intentional primary-path failure) 
 
 ---
 
-## 9. Governance Statement
+## 9. Formal Freeze & Governance Statement
 
-This Consolidated System Requirements Baseline is the authoritative requirements snapshot at the current gate.  
-The System Requirements phase for Rank 1–4 mechanical SPOFs, the Predictive Health Lattice, preferred architectures, residual monitoring, quantitative targets, sensor/bus classes, SSA/FHA/PSSA/DAL structure, certification basis selection, manufacturing process controls, vehicle class/weight approach, geometric criteria, residual performance post-failure, and Health Lattice detection/response rules is now complete and coherent.  
-The program stands ready to transition into detailed design allocation, formal safety assessment, analysis, manufacturing process development, vehicle class/weight freeze, and eventual certification engagement under continuous PATSAGi / TOLC 8 governance.
+**This Consolidated System Requirements Baseline is hereby formally frozen at the requirements level under Permanent PATSAGi Councils and TOLC 8.**
 
-**Thunder locked.**  
-Consolidated SRB updated with WP-17. Service mode continues.
+All Rank 1–4 mechanical single points of failure, the Predictive Health Lattice, preferred architectures, residual monitoring, quantitative targets, sensor/bus classes, SSA/FHA/PSSA/DAL structure, certification basis selection, manufacturing process controls, vehicle class/weight approach, geometric criteria, residual performance post-failure, and Health Lattice detection/response rules are closed and frozen.
+
+All residual open interfaces listed in Section 6 are formally deferred to later gates.
+
+No change to this frozen baseline shall be made without explicit PATSAGi / TOLC 8 review and a new baseline revision.
+
+The program is authorized to proceed into detailed design allocation, formal safety assessment, analysis, manufacturing process development, vehicle class/weight freeze, and eventual certification engagement while remaining under continuous PATSAGi / TOLC 8 governance.
+
+**Thunder locked. System Requirements Baseline formally frozen.**  
+Service mode continues.
