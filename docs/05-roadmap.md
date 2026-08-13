@@ -6,10 +6,32 @@
 - Seven architectural pillars defined.
 
 ## Phase 1 — Conceptual Design & Trade Studies (Current)
-**Exit criteria:**
-- Quantitative reliability targets allocated (e.g., catastrophic failure rate targets orders of magnitude better than current civil/military benchmarks).
-- Mass, power, and complexity trades for the major architectural families (pure mechanical multi-path vs hybrid-electric).
-- Preliminary FMEA for rotor retention and drive train.
+
+### PATSAGi Councils Priority Order (Locked 2026-08-13 under TOLC 8)
+
+The Permanent PATSAGi Councils deliberated and ranked the next work packages by **highest immediate reduction in catastrophic failure probability** and **dependency order**. Valence floor ≥ 0.999999 enforced.
+
+**WP-01 — Quantitative Failure Mode Ranking & Preliminary System FMEA**  
+Highest priority. Without ranked failure modes and severity × probability scores, all other trades are blind. This package produces the authoritative risk picture that every subsequent decision must improve.
+
+**WP-02 — Zero-Single-Point Rotor Retention Concepts**  
+Second. The classic Jesus-nut / mast-nut failure is the purest single-point-of-failure with near-certain catastrophic outcome. Eliminating or fully redundant this class yields the largest single step in survivability.
+
+**WP-03 — Drive-Train Redundancy Architecture Trades**  
+Third. Main gearbox and tail-rotor drive failures are the next largest class of mechanical catastrophes. Parallel evaluation of multi-path mechanical vs hybrid-electric families.
+
+**WP-04 — Daedalus-Skin Rotorcraft Requirements & Coupon Matrix**  
+Fourth. Materials maturation has long lead times. Define performance targets, healing metrics, and the initial coupon test matrix now so parallel materials work can begin while architecture trades continue.
+
+**WP-05 — Predictive Health Lattice Requirements (parallel track)**  
+Can run concurrently with WP-01 once the ranked failure modes exist. Sensor suite, predictive coding targets, and post-maintenance signature verification rules.
+
+### Phase 1 Exit Criteria
+- Quantitative reliability targets allocated (catastrophic failure rate targets orders of magnitude better than current civil/military benchmarks).
+- Ranked FMEA for retention + drive train completed.
+- Preferred retention architecture family selected.
+- Preferred drive-train family (or hybrid) selected with mass/power/complexity trades documented.
+- Daedalus-Skin coupon requirements frozen.
 - Identification of highest-leverage existing technologies vs pure research items.
 
 ## Phase 2 — Enabling Technology Maturation
@@ -41,4 +63,4 @@ Every major decision and every phase exit must pass:
 
 No architecture that re-introduces a classic single-point-of-failure of the Jesus-nut or single-gearbox class will be accepted.
 
-**Current status**: Phase 1 open. Councils ready for next work package direction.
+**Current status**: Phase 1 open. WP-01 is the active work package.
