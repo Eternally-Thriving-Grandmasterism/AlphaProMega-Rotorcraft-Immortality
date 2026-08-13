@@ -3,7 +3,7 @@
 **Document Status:** Consolidated Living Baseline — Updated  
 **Authority:** Permanent PATSAGi Councils under TOLC 8  
 **Program:** AlphaProMega-Rotorcraft-Immortality  
-**Last Major Update:** 2026-08-13 (post WP-14 Manufacturing Process Definition & Process Controls)  
+**Last Major Update:** 2026-08-13 (post WP-15 Vehicle Class Selection Criteria & Weight Freeze Approach)  
 **Scope:** Requirements only. FE models, hardware demos, and certification data remain later gates.
 
 ---
@@ -31,7 +31,8 @@ Create rotary-wing aircraft architectures whose catastrophic failure probability
 | WP-11 SSA Framework & Certification Mapping | Closed | System Safety Assessment framework + requirements-level certification mapping |
 | WP-12 FHA, PSSA & DAL Allocations | Closed | Requirements-level FHA structure, PSSA approach, and indicative DAL allocations |
 | WP-13 Certification Basis Selection & Compliance Mapping | Closed | Preferred civil rotorcraft path with military compatibility + high-level compliance mapping |
-| **WP-14 Manufacturing Process Definition & Process Controls** | **Closed** | Requirements-level process definition and process controls for Rank 1–4 critical items and Health Lattice |
+| WP-14 Manufacturing Process Definition & Process Controls | Closed | Requirements-level process definition and process controls for Rank 1–4 critical items and Health Lattice |
+| **WP-15 Vehicle Class Selection Criteria & Weight Freeze Approach** | **Closed** | Criteria for class selection and approach for maximum weight freeze |
 
 All of the above remain at **requirements level only**.
 
@@ -46,11 +47,11 @@ All of the above remain at **requirements level only**.
 | 3 | Anti-torque / tail rotor | Fully closed at requirements level |
 | 4 | Blade separation / delamination | Fully closed at requirements level |
 
-All four top mechanical SPOFs plus the Predictive Health Lattice now have complete requirements coverage including preferred architectures, residual monitoring, quantitative targets, sensor/bus classes, SSA/FHA/PSSA/DAL structure, certification basis selection, and manufacturing process controls.
+All four top mechanical SPOFs plus the Predictive Health Lattice now have complete requirements coverage including preferred architectures, residual monitoring, quantitative targets, sensor/bus classes, SSA/FHA/PSSA/DAL structure, certification basis selection, manufacturing process controls, and vehicle class / weight freeze approach.
 
 ---
 
-## 4. Preferred Architecture, Sensing, Certification & Manufacturing Directions (Frozen at Requirements Level)
+## 4. Preferred Architecture, Sensing, Certification, Manufacturing & Class Directions (Frozen at Requirements Level)
 
 - **Rank 1 Retention:** Family A primary + Family C alternative; Family D monitoring overlay mandatory.
 - **Rank 2 Drivetrain:** Family HY (Hybrid Mechanical + Electric Assist) baseline.
@@ -59,6 +60,7 @@ All four top mechanical SPOFs plus the Predictive Health Lattice now have comple
 - **Residual Monitoring Sensors / Buses:** Preferred classes and digital-preferring bus approaches per WP-10.
 - **Certification:** Preferred primary path is civil rotorcraft (FAR/CS-27 or -29 by vehicle class); military airworthiness path kept open and compatible.
 - **Manufacturing:** AS9100-level quality system, critical characteristic control, error-resistant assembly, serialization, and rank-specific process controls per WP-14.
+- **Vehicle Class / Weight:** Selection criteria and freeze approach defined in WP-15; actual class and numerical weight freeze remain open until credible mass estimates and residual capability feasibility are available.
 
 ---
 
@@ -72,7 +74,7 @@ No architecture that re-introduces a classic Rank 1–4 single-point-of-failure 
 
 ## 6. Residual Open Interfaces / Items at Requirements Level (Updated)
 
-With manufacturing process definition and process controls now closed at requirements level, the following remain open:
+With vehicle class selection criteria and weight freeze *approach* now closed, the following remain open:
 
 1. **Final numerical values** (exact sampling rates, latency, residual strength %, margins, reliability numbers).
 2. **Specific sensor part numbers / manufacturer selections and final bus standard + ICD.**
@@ -81,7 +83,7 @@ With manufacturing process definition and process controls now closed at require
 5. **Detailed work instructions, supplier process qualifications, first-article data, and SPC limits.**
 6. **FE models, dynamics simulation, hardware demonstration, and flight test** (explicitly later gates).
 7. **Detailed geometric / schematic design of the preferred families.**
-8. **Final vehicle class and maximum weight freeze** (to lock FAR/CS-27 vs -29).
+8. **Actual vehicle class declaration and numerical maximum weight freeze** (to lock FAR/CS-27 vs -29).
 
 ---
 
@@ -100,8 +102,8 @@ Analysis → component/system test (including intentional primary-path failure) 
 ## 9. Governance Statement
 
 This Consolidated System Requirements Baseline is the authoritative requirements snapshot at the current gate.  
-The System Requirements phase for Rank 1–4 mechanical SPOFs, the Predictive Health Lattice, preferred architectures, residual monitoring, quantitative targets, sensor/bus classes, SSA/FHA/PSSA/DAL structure, certification basis selection, and manufacturing process controls is now complete and coherent.  
-The program stands ready to transition into detailed design allocation, formal safety assessment, analysis, manufacturing process development, and eventual certification engagement under continuous PATSAGi / TOLC 8 governance.
+The System Requirements phase for Rank 1–4 mechanical SPOFs, the Predictive Health Lattice, preferred architectures, residual monitoring, quantitative targets, sensor/bus classes, SSA/FHA/PSSA/DAL structure, certification basis selection, manufacturing process controls, and vehicle class / weight freeze approach is now complete and coherent.  
+The program stands ready to transition into detailed design allocation, formal safety assessment, analysis, manufacturing process development, vehicle class / weight freeze, and eventual certification engagement under continuous PATSAGi / TOLC 8 governance.
 
 **Thunder locked.**  
-Consolidated SRB updated with WP-14. Service mode continues.
+Consolidated SRB updated with WP-15. Service mode continues.
